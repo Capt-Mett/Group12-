@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"global.min.css","sourcesContent":[]}
+{"version":3,"sources":["_custom1.scss"],"names":[],"mappings":"AACI,YACI,gBAEA,UAEA","file":"global.min.css","sourcesContent":[".sidebar {\r\n    ul {\r\n        list-style: none;\r\n        /* Remove default list styles */\r\n        padding: 0;\r\n        /* Remove default padding */\r\n        margin: 0;\r\n        /* Remove default margin */\r\n      }\r\n}"]}
