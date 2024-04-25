@@ -1,0 +1,11 @@
+
+# Created by https://www.gitignore.io/api/laravel
+# Edit at https://www.gitignore.io/?templates=laravel
+
+
+# End of https://www.gitignore.io/api/laravel
+# /dependencies/resources/AppServiceProvider.php
+# /dependencies/app/Providers/AppServiceProvider.php
+/node_modules
+/package-lock.json
+/Design
