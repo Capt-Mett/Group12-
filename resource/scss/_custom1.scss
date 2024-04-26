@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth !important;
+}
 .sidebar {
     ul {
         list-style: none;
@@ -7,4 +10,55 @@
         margin: 0;
         /* Remove default margin */
       }
+}
+.type1 {
+  background-color: #f8f8f8;
+}
+.content-container {
+  * {
+    font-family: $base-font;
+    font-weight: $base-font-weight;
+  }
+  a {
+    color: #000;
+  }
+  i {
+    font-size: 1.20rem;
+  }
+  .upper {
+    text-transform: uppercase;
+  }
+  .event-name {
+    font-weight: 100;
+  }
+  .bolder {
+    font-weight: 600;
+  }
+  .greenHilight {
+    color: $base-green-color;
+  }
+  .bg-danger {
+    background-color: $base-ping-color!important;
+  }
+  .desc {
+    color: $base-grey-color;
+    font-size: 0.9rem;
+  }
+
+  .hilight {
+    font-weight: bolder;
+    font-size: $hilight-1;
+  }
+
+  .major {
+    font-size: $hilight-0;
+  }
+
+  .box-container {
+    border-radius: 20px;
+    background-color: #fff;
+    button {
+      font-size: 0.80rem;
+    }
+  }
 }

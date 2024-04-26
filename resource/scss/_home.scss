@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 body{
   display: flex;
@@ -11,7 +10,6 @@ body{
   padding: 0 10px;
   justify-content: center;
   min-height: 100vh;
-  background: #F8F8F8;
 }
 
 
@@ -42,7 +40,7 @@ h1,h2,h3,h4 {
   color: #578F8C !important;
 }
 .box-container {
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  // box-shadow: 0 15px 40px rgba(0,0,0,0.12);
   margin-top: 20px;
 }
 button {
@@ -51,8 +49,7 @@ button {
 
 /*Calendar*/
 .wrapper{
-  width: 750px;
-  height: 800px;
+  width: 100%;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
@@ -128,6 +125,10 @@ header {
             border-radius: 50%;
             transform: translate(-50%, -50%);
           }
+
+          &:not(.active):hover::before{
+            background: #f2f2f2;
+          }
       }
   }
 
@@ -145,9 +146,19 @@ header {
   }
 }
 
-.days li.active::before{ /*Selected date*/
-  /* background: #9B59B6; */
-}
-.days li:not(.active):hover::before{
-  background: #f2f2f2;
+
+.content-container {
+  .box-container {
+    .arrow-up {
+      margin-right: -3px;
+      i {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  .event-location {
+    font-size: $hilight-3;
+    font-weight: bold;
+  }
 }
