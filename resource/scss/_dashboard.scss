@@ -63,51 +63,34 @@ h4 {
 // }
 
 
-/*Calendar*/
-.wrapper {
-  /* position: fixed; */
-  width: 950px;
-  height: 600px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
+// header {
+  //   .icons {
+  //     display: flex;
 
-.wrapper header {
-  display: flex;
-  align-items: center;
-  padding: 25px 30px 10px;
-  justify-content: space-between;
-}
+  //     span {
+  //       height: 38px;
+  //       width: 38px;
+  //       margin: 0 1px;
+  //       cursor: pointer;
+  //       color: #878787;
+  //       text-align: center;
+  //       line-height: 38px;
+  //       font-size: 1.9rem;
+  //       user-select: none;
+  //       border-radius: 50%;
 
-header {
-  .icons {
-    display: flex;
+  //       &:last-child {
+  //         margin-right: -10px;
+  //       }
 
-    span {
-      height: 38px;
-      width: 38px;
-      margin: 0 1px;
-      cursor: pointer;
-      color: #878787;
-      text-align: center;
-      line-height: 38px;
-      font-size: 1.9rem;
-      user-select: none;
-      border-radius: 50%;
+  //       &:hover {
+  //         background: #f2f2f2;
+  //       }
+  //     }
+  //   }
 
-      &:last-child {
-        margin-right: -10px;
-      }
-
-      &:hover {
-        background: #f2f2f2;
-      }
-    }
-  }
-
-  .current-date {
-    font-size: 1.45rem;
-    font-weight: 500;
-  }
-}
+  //   .current-date {
+  //     font-size: 1.45rem;
+  //     font-weight: 500;
+  //   }
+  // }
