@@ -5,13 +5,11 @@ html {
 }
 
 body {
-  display: flex;
   align-items: center;
-  padding: 0 10px;
+  // padding: 0 10px;
   justify-content: center;
   min-height: 100vh;
 }
-
 
 /*Nav-bar*/
 .sidebar {
@@ -39,19 +37,18 @@ body {
 }
 
 .nav-item {
-  width: 100%;
+  // width: 100%;
   /* Full width of each navbar item */
   text-align: center;
   /* Center text horizontally */
 }
-
 
 /*Main Content*/
 h1,
 h2,
 h3,
 h4 {
-  color: #578F8C !important;
+  color: #578f8c !important;
 }
 
 .box-container {
@@ -169,7 +166,6 @@ header {
     }
   }
 }
-
 
 .content-container {
   .box-container {
