@@ -15,6 +15,13 @@ var paths = {
     // Compiled files will end up in whichever folder it's found in (partials are not compiled)
     dest: "assets/css",
   },
+  script: {
+    src: [
+      "resource/js/global.js",
+      "resource/js/home.js"
+    ],
+    dest: "assets/js",
+  }
 };
 
 var SassBuild = () => {
@@ -80,16 +87,8 @@ function script_app() {
 function script() {
   return (
     gulp
-      .src([
-        "resource/js/**/local_lang_template.js",
-        "resource/js/blazy.min.js",
-        "resource/js/jquery.blockUI.js",
-        "resource/js/swiper.min.js",
-        "resource/js/global.js",
-        // '!resource/js/**/*.min.js',
-        "!resource/js/**/app.js",
-      ])
-      .pipe(concat("plus-lib.js"))
+      .src(paths.script.src)
+      .pipe(concat("global.js"))
       .pipe(sourcemaps.init())
       //.pipe(uglify())
       .pipe(
@@ -97,9 +96,9 @@ function script() {
           suffix: ".min",
         })
       )
-      .pipe(sourcemaps.write())
-      // .pipe(flatten())
-      .pipe(gulp.dest("assets/js"))
+      .pipe(sourcemaps.init())
+      .pipe(terser())
+      .pipe(gulp.dest(paths.script.dest))
       .pipe(browsersync.stream())
   );
 }
@@ -179,7 +178,7 @@ function copyJson() {
 
 function watchFiles() {
   // gulp.watch(paths.styles.src, style);
-  // gulp.watch(['resource/js/**/*.js','!resource/js/**/*.min.js','!resource/js/**/app.js'], script);
+  gulp.watch(paths.script.src, script);
   // gulp.watch(['!resource/js/**/*.js','!resource/js/**/*.min.js','resource/js/**/app.js'], script_app);
   gulp.watch(paths.styles.src,
     SassBuild
@@ -188,7 +187,7 @@ function watchFiles() {
   // gulp.watch(['resource/source_data/*.json'], browserSyncReload);
 }
 
-var build = gulp.parallel(SassBuild, watchFiles);
+var build = gulp.parallel(SassBuild, script, watchFiles);
 
 // export tasks
 exports.SassBuild = SassBuild;
