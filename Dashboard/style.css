@@ -89,10 +89,12 @@ h4 {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   /* margin-top: 20px; */
 }
+
 .alert-btn {
   background-color: #F0A89E;
-  
+
 }
+
 button {
   border-radius: 10px !important;
 }
