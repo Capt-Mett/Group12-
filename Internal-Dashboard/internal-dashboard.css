@@ -63,7 +63,6 @@ body {
 
 /*Plus button*/
 .circle {
-  background: #FCA49B;
   width: 100px;
   height: 100px;
 
@@ -116,12 +115,10 @@ thead {
 .status-delivered {
     background: #578F8C;
 }
-
 .status-transit {
   background: #FCA49B;
 
 }
-
 th,td {
   text-align: center !important;
 }
@@ -129,4 +126,9 @@ th,td {
 /*Utility classes*/
 .margin-left {
   margin-left: 100px;
+}
+
+button {
+  background: #FCA49B;
+  
 }
