@@ -39,15 +39,15 @@
             <li><a href="#"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Calender.jpg?raw=true"></a>
             </li>
             <br>
-            <li><a href="#"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/tasks.jpg?raw=true"></a></li>
-            <li class="Settings">&#9965;</li>
+            <!-- <li><a href="#"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/tasks.jpg?raw=true"></a></li>
+            <li class="Settings">&#9965;</li> -->
         </ul>
     </nav>
 
-    <section class="top-container mb-5">
-        <h1 class="h1 mb-4">Internal Team Dashboard</h1>
+    <section class="top-container mb-5 ms-1">
+        <h1 class="h1 title mb-4">Internal Team Dashboard</h1>
         <div class="d-flex">
-            <div class="small-box p-4 rounded col-6 me-5 "> <!-- Small box container-->
+            <div class="small-box p-4 rounded col-3 me-3 "> <!-- Small box container-->
                 <div class="d-flex flex-column">
                     <p class="fw-bold h5 ">Orders to Send</p>
                     <div>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="small-box p-4 rounded col-6 me-5 "> <!-- Small box container-->
+            <div class="small-box p-4 rounded col-3 me-3 "> <!-- Small box container-->
                 <div class="d-flex flex-column">
                     <p class="fw-bold h5 ">Sent Orders</p>
                     <div>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            <div class="small-box p-4 rounded col-6 me-5 "> <!-- Small box container-->
+            <div class="small-box p-4 rounded col-3 me-3 "> <!-- Small box container-->
                 <div class="d-flex flex-column">
                     <p class="fw-bold h5 ">Expected Returns</p>
                     <div>
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <button class="circle col-2 border border-0 rounded-pill">
+            <button type="button" class="circle  border border-0 rounded-pill">
                 <div class="plus-wrapper p-3">
                     <div class="horizontal">
                         <div class="vertical">
@@ -88,16 +88,106 @@
         </div>
     </section>
 
-    <section class="main-content d-flex">
-        <div class="grahp-container col-8 border border-danger">
+    <section class="main-content d-flex margin-left ">
+        <div class="grahp-container col-6 border border-danger ms-5">
 
         </div>
-        
+
         <div class="ratings-container col-4 border border-success">
-            <h1>adslkdjasdj</h1>
+            <h2 class="text-center p-2 m-3 border-bottom border-black border-2">Highest Rating</h2>
+            <div class="rank-list">
+                <div class="rank-item d-flex "> <!-- individual rank item-->
+                    <div>
+                        <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/hero/389923-01.png?$responsive$&cropPathE=mobile&fit=stretch,1&wid=440"
+                            alt="" width="100"> </img>
+                    </div>
+                    <div class="my-4 mx-4">
+                        <h4>Airstrait</h4>
+                        <h5 class="fw-semibold text-secondary">Blue/Copper</h5>
+                    </div>
+
+                    <div class="review my-4">
+                        <h4>5 Stars</h4>
+                        <h5 class="fw-semibold text-secondary">23 reviews</h5>
+                    </div>
+                </div>
+                <div class="rank-item d-flex "> <!-- individual rank item-->
+                    <div>
+                        <img src="https://media.glamourmagazine.co.uk/photos/645e048159411ece04184318/1:1/w_1280%2Cc_limit/DYSON%2520120523%2520553-PDP-specification-BNKBCO-leap-magento.jpg"
+                            alt="" width="100"> </img>
+                    </div>
+                    <div class="my-4 mx-4">
+                        <h4>Airstrait</h4>
+                        <h5 class="fw-semibold text-secondary">Blue/Copper</h5>
+                    </div>
+
+                    <div class="review my-4">
+                        <h4>5 Stars</h4>
+                        <h5 class="fw-semibold text-secondary">23 reviews</h5>
+                    </div>
+                </div>
+                <div class="rank-item d-flex "> <!-- individual rank item-->
+                    <div>
+                        <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/448799-01.png"
+                            alt="" width="100"> </img>
+                    </div>
+                    <div class="my-4 mx-4">
+                        <h4>Airstrait</h4>
+                        <h5 class="fw-semibold text-secondary">Blue/Copper</h5>
+                    </div>
+
+                    <div class="review my-4">
+                        <h4>5 Stars</h4>
+                        <h5 class="fw-semibold text-secondary">23 reviews</h5>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="report-btn border-0 rounded fs-3 mx-4">Report</button>
+
         </div>
     </section>
 
+    <section class="order-table p-5 margin-left">
+        <h1 class="my-3">Recent Orders</h1>
+        <table>
+            <thead class="text-secondary border-top border-bottom">
+                <tr>
+                    <th>Media Team</th>
+                    <th>Order Number</th>
+                    <th>Date</th>
+                    <th>Amount of Products</th>
+                    <th>Status</th>
+                    <th>Tracking Number</th>
+                </tr>
+            </thead>
+            <tbody class="fw-bolder"> 
+                <tr class="border-bottom"> 
+                    <td>McKenzie</td>
+                    <td>12284</td>
+                    <td>23/04/2024</td>
+                    <td>8</td>
+                    <td class="order-status">Delivered</td> <!--status-->
+                    <td>34912A</td>
+                </tr>
+                <tr class="border-bottom"> 
+                    <td>KPMG</td>
+                    <td>12284</td>
+                    <td>13/02/2024</td>
+                    <td>8</td>
+                    <td class="order-status" >Delivered</td> <!--status-->
+                    <td>32982C</td>
+                </tr>
+                <!-- <tr class="border-bottom"> 
+                    <td>Row 3, Col 1</td>
+                    <td>Row 3, Col 2</td>
+                    <td>Row 3, Col 3</td>
+                    <td>Row 3, Col 4</td>
+                    <td>Row 3, Col 5</td>
+                    <td>Row 3, Col 6</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </section>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
