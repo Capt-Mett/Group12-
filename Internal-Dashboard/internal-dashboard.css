@@ -1,6 +1,7 @@
 body {
   background: #F8F8F8;
   /* max-width: 1000px; */
+  /* font-family: mo; */
 }
 
 
@@ -103,16 +104,27 @@ body {
 
 /*Table*/
 table {
-  width: 100%;
-  height: 400px;
+  width: 90%;
+  height: 300px;
 }
 thead {
   height: 80px;
 }
 .order-status {
-  /* background: #578F8C; */
+  width: 100px;
+}
+.status-delivered {
+    background: #578F8C;
 }
 
+.status-transit {
+  background: #FCA49B;
+
+}
+
+th,td {
+  text-align: center !important;
+}
 
 /*Utility classes*/
 .margin-left {
