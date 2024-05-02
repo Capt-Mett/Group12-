@@ -2,14 +2,14 @@ html {
   scroll-behavior: smooth !important;
 }
 .sidebar {
-    ul {
-        list-style: none;
-        /* Remove default list styles */
-        padding: 0;
-        /* Remove default padding */
-        margin: 0;
-        /* Remove default margin */
-      }
+  ul {
+    list-style: none;
+    /* Remove default list styles */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+  }
 }
 .type1 {
   background-color: #f8f8f8;
@@ -23,14 +23,14 @@ html {
     color: #000;
   }
   i {
-    font-size: 1.20rem;
+    font-size: 1.2rem;
   }
   .upper {
     text-transform: uppercase;
   }
-  .event-name {
-    font-weight: 100;
-  }
+  // .event-name {
+  //   font-weight: 100;
+  // }
   .bolder {
     font-weight: 600;
   }
@@ -38,7 +38,7 @@ html {
     color: $base-green-color;
   }
   .bg-danger {
-    background-color: $base-ping-color!important;
+    background-color: $base-ping-color !important;
   }
   .desc {
     color: $base-grey-color;
@@ -58,7 +58,7 @@ html {
     border-radius: 20px;
     background-color: #fff;
     button {
-      font-size: 0.80rem;
+      font-size: 0.8rem;
     }
   }
 }
