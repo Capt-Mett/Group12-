@@ -1,6 +1,7 @@
 const app = angular.module("ExternalDashboard", []);
 app.controller("ExternalDashboardCtrl", ($scope, $filter, $timeout, $http) => {
   $scope.leftmenu = "view/partial/leftmenu.html";
+  $scope.BoxDisplayOne = "view/partial/boxStyleOne.html";
   $scope.inventorys = [
     {
       title: "Expexted Orders",

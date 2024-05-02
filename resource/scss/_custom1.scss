@@ -1,19 +1,27 @@
 html {
   scroll-behavior: smooth !important;
-}
-.sidebar {
-  ul {
-    list-style: none;
-    /* Remove default list styles */
-    padding: 0;
-    /* Remove default padding */
-    margin: 0;
-    /* Remove default margin */
-  }
-}
-.type1 {
   background-color: #f8f8f8;
 }
+body {
+  background-color: #f8f8f8;
+}
+// .type1 {
+//   background-color: #f8f8f8;
+// }
+.btn-success {
+  background-color: $base-green-color;
+  font-weight: bold;
+}
+.btn-danger {
+  border-color: $base-ping-color;
+  background-color: $base-ping-color;
+  font-weight: bold;
+  &:hover {
+    border-color: $base-ping-color-Hover;
+    background-color: $base-ping-color-Hover;
+  }
+}
+
 .content-container {
   * {
     font-family: $base-font;
