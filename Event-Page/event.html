@@ -5,6 +5,8 @@
 <head>
     <meta charset="utf-8">
     <title>Event Page</title>
+    <link rel="stylesheet" href="../assets/css/global.min.css">
+
     <link rel="stylesheet" href="event.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Font Link for Icons -->
@@ -21,7 +23,7 @@
 </head>
 
 
-<body>
+<body class="event-page">
     <nav class="sidebar ps-3">
         <ul>
             <li><a href="#"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Logo.jpg?raw=true"
@@ -47,42 +49,16 @@
         </ul>
     </nav>
     <div>
-        <h1 class="h1 title position-fixed mt-5">Event Calender</h1>
+        <h1 class="h1 title position-fixed mx-5">Event Calender</h1>
     </div>
 
 
     <section class="main-container d-flex mt-0 "> <!-- Main container of layout-->
         <div class="content-container me-5 ">
             <div class="box-container mt-2 p-4 "> <!--box container-->
-                <div class="d-flex flex-row justify-content-between w-100 rounded">
-                    <span class="event-name fs-3">Beauty Conference</span>
-                    <button class=" alert-btn text-light border border-0 px-4">Due date</button>
-                </div>
-                <h4 class="event-location">Los Angeles</h4>
-                <p>information & Description</p>
-                <div>
-                    <span>Status</span>
-                    <!-- Progress bar here -->
-                </div>
-            </div>
-
-            <div class="box-container mt-2 p-4 "> <!--box container-->
-                <div class="d-flex flex-row justify-content-between w-100 rounded">
-                    <span class="event-name fs-3">Beauty Conference</span>
-                    <button class=" alert-btn text-light border border-0 px-4">Due date</button>
-                </div>
-                <h4 class="event-location">Los Angeles</h4>
-                <p>information & Description</p>
-                <div>
-                    <span>Status</span>
-                    <!-- Progress bar here -->
-                </div>
-            </div>
-
-            <div class="box-container mt-2 p-4 "> <!--box container-->
-                <div class="d-flex flex-row justify-content-between w-100 rounded">
-                    <span class="event-name fs-3">Beauty Conference</span>
-                    <button class=" alert-btn text-light border border-0 px-4">Due date</button>
+                <div class="d-flex flex-column justify-content-between w-100 rounded">
+                    <button class=" alert-btn text-light border border-0 p-2">+ Add New Event</button>
+                    <h3 class="event-name fs-4 text-dark my-4 border-bottom">Created Events</h3>
                 </div>
                 <h4 class="event-location">Los Angeles</h4>
                 <p>information & Description</p>

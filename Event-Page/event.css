@@ -75,10 +75,9 @@ h4 {
   /* right: 100px; */
 }
 
-.box-container,
-.small-box {
+.box-container {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  /* margin-top: 20px; */
+  width: 300px;
 }
 
 .alert-btn {
@@ -95,7 +94,7 @@ button {
 .wrapper {
   /* position: fixed; */
   width: 950px;
-  height: 600px;
+  /* height: 600px; */
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
@@ -151,7 +150,7 @@ header .current-date {
 
 .calendar .days {
   margin-bottom: 20px;
-  height: 450px;
+  /* height: 450px; */
 }
 
 .calendar li {
