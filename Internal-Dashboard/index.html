@@ -1,147 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Internal Dashboard</title>
-    <link href="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../assets/css/global.min.css" />
     <link rel="stylesheet" href="internal-dashboard.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Font Link for Icons -->
     <link rel="preconnect" href="//fonts.googleapis.com" />
-    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
-    <link href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-</head>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin />
+    <link
+      href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="internal-dashboard-page p-3" ng-app="InternalDashboardPage" ng-controller="InternalDashboardPageCtrl">
-    <nav class="sidebar ps-3" ng-include="leftmenu"></nav>
+  <body
+    class="internal-dashboard-page p-3"
+    ng-app="InternalDashboardPage"
+    ng-controller="InternalDashboardPageCtrl"
+  >
+    <nav class="sidebar" ng-include="leftmenu"></nav>
 
     <section class="container mt-5 mb-5">
-        <!-- Main container of layout-->
-        <div class="content-container">
-          <div class="row">
-            <div class="col-12">
-              <h1 class="hilight major">Internal Team Dashboard</h1>
-            </div>
-            <div class="col-12 row mb-5">
-              <div
-                class="col-4"
-                ng-repeat="(key, it) in inventorys | orderBy:'key':true track by key"
-                ng-include="BoxDisplayOne"
-              ></div>
-            </div>
-            
-            
+      <!-- Main container of layout-->
+      <div class="content-container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="hilight major">Internal Team Dashboard</h1>
+          </div>
+          <div class="col-12 row mb-5">
+            <div
+              class="col-4"
+              ng-repeat="(key, it) in inventorys | orderBy:'key':true track by key"
+              ng-include="BoxDisplayOne"
+            ></div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    <section class="main-content d-flex margin-left">
-        <div class="grahp-container col-6 border border-danger ms-5">
+    <section class="main-content container">
+      <div class="d-flex">
+        <div class="grahp-container col-6 border border-danger"></div>
 
-        </div>
+        <div class="ratings-container col-6 border border-success">
+          <h2 class="text-center p-2 m-3 border-bottom border-black border-2">
+            Highest Rating
+          </h2>
+          <div class="rank-list p-3">
+            <div
+              ng-repeat="(key, it) in HighestRatings | orderBy:'key':false track by key"
+              class="rank-item d-flex mb-3"
+            >
+              <!-- individual rank item-->
+              <img
+                ng-src="{{it.Thumb}}"
+                alt=""
+                class="img-fluid"
+                style="max-width: 100px"
+              />
+              <div class="my-4 mx-4">
+                <h4 ng-bind="it.Title"></h4>
+                <h5 class="fw-semibold text-secondary" ng-bind="it.Detail"></h5>
+              </div>
 
-        <div class="ratings-container col-4 border border-success">
-            <h2 class="text-center p-2 m-3 border-bottom border-black border-2">Highest Rating</h2>
-            <div class="rank-list">
-                <div class="rank-item d-flex "> <!-- individual rank item-->
-                    <div>
-                        <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/hero/389923-01.png?$responsive$&cropPathE=mobile&fit=stretch,1&wid=440"
-                            alt="" width="100"> </img>
-                    </div>
-                    <div class="my-4 mx-4">
-                        <h4>Airstrait</h4>
-                        <h5 class="fw-semibold text-secondary">Blue/Copper</h5>
-                    </div>
-
-                    <div class="review my-4">
-                        <h4>5 Stars</h4>
-                        <h5 class="fw-semibold text-secondary">23 reviews</h5>
-                    </div>
-                </div>
-                <div class="rank-item d-flex "> <!-- individual rank item-->
-                    <div>
-                        <img src="https://media.glamourmagazine.co.uk/photos/645e048159411ece04184318/1:1/w_1280%2Cc_limit/DYSON%2520120523%2520553-PDP-specification-BNKBCO-leap-magento.jpg"
-                            alt="" width="100"> </img>
-                    </div>
-                    <div class="my-4 mx-4">
-                        <h4>Airstrait</h4>
-                        <h5 class="fw-semibold text-secondary">Blue/Copper</h5>
-                    </div>
-
-                    <div class="review my-4">
-                        <h4>5 Stars</h4>
-                        <h5 class="fw-semibold text-secondary">23 reviews</h5>
-                    </div>
-                </div>
-                <div class="rank-item d-flex "> <!-- individual rank item-->
-                    <div>
-                        <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/448799-01.png"
-                            alt="" width="100"> </img>
-                    </div>
-                    <div class="my-4 mx-4">
-                        <h4>Airstrait</h4>
-                        <h5 class="fw-semibold text-secondary">Blue/Copper</h5>
-                    </div>
-
-                    <div class="review my-4">
-                        <h4>5 Stars</h4>
-                        <h5 class="fw-semibold text-secondary">23 reviews</h5>
-                    </div>
-                </div>
+              <div class="review my-4">
+                <h4><span ng-bind="it.Stars"></span> Stars</h4>
+                <h5 class="fw-semibold text-secondary">
+                  <span ng-bind="it.Reviews"></span> reviews
+                </h5>
+              </div>
             </div>
-            <button type="button" class="report-btn border-0 rounded fs-3 mx-4">Report</button>
+          </div>
 
+          <div class="mb-3 mt-3 text-center">
+            <button type="button" class="btn btn-success">Report</button>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="order-table p-5 margin-left">
-        <h1 class="my-3">Recent Orders</h1>
-        <table>
-            <thead class="text-secondary border-top border-bottom">
-                <tr>
-                    <th>Media Team</th>
-                    <th>Order Number</th>
-                    <th>Date</th>
-                    <th>Amount of Products</th>
-                    <th>Status</th>
-                    <th>Tracking Number</th>
-                </tr>
-            </thead>
-            <tbody class="fw-bolder">
-                <tr class="border-bottom">
-                    <td>McKenzie</td>
-                    <td>#12284</td>
-                    <td>23/04/2024</td>
-                    <td>8</td>
-                    <td>
-                        <div class="order-status status-delivered rounded text-light p-1">
-                            <p class="my-2">Delivered</p>
-                        </div>
-                    </td> <!--status-->
-                    <td>34912A</td>
-                </tr>
-                <tr class="border-bottom">
-                    <td>KPMG</td>
-                    <td>#12284</td>
-                    <td>13/02/2024</td>
-                    <td>8</td>
-                    <td>
-                        <div class="order-status status-transit rounded text-light p-1">
-                            <p class="my-2">In Transit</p>
-                        </div> <!--status-->
-                    </td>
-                    <td>32982C</td>
-                </tr>
-            </tbody>
+    <section class="container">
+      <div class="order-table">
+        <h1 class="my-3 mt-5 mb-3">Recent Orders</h1>
+        <table class="w-100">
+          <thead class="text-secondary border-top border-bottom">
+            <tr>
+              <th>Media Team</th>
+              <th>Order Number</th>
+              <th>Date</th>
+              <th>Amount of Products</th>
+              <th>Status</th>
+              <th>Tracking Number</th>
+            </tr>
+          </thead>
+          <tbody class="fw-bolder">
+            <tr
+              class="border-bottom"
+              ng-repeat="(key, it) in RecentOrders | orderBy:'key':false track by key"
+            >
+              <td ng-bind="it.MediaTeam"></td>
+              <td ng-bind="'#' + it.OrderNumber"></td>
+              <td ng-bind="it.OrderDate"></td>
+              <td ng-bind="it.AmountOfProducts"></td>
+              <td class="text-center">
+                <button
+                  type="button"
+                  ng-class="{'btn':true, 'btn-success': it.Status == 'Delivered', 'btn-danger': it.Status == 'In Transit'}"
+                >
+                  <p class="my-2" ng-bind="it.Status"></p>
+                </button>
+              </td>
+              <!--status-->
+              <td ng-bind="it.TrackingNumber"></td>
+            </tr>
+          </tbody>
         </table>
-        <button class="my-4 border-0 col-3 rounded py-3 fs-4 fw-bold text-light">View All Order</button>
+        <button
+          class="my-4 border-0 col-3 rounded py-3 fs-4 fw-bold text-light"
+        >
+          View All Order
+        </button>
+      </div>
     </section>
 
-    <script src="../assets/js/global.min.js" defer></script>
+    <!-- <script src="../assets/js/global.min.js" defer></script> -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script
       type="text/javascript"
@@ -152,5 +142,5 @@
       href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <script type="text/javascript" src="internal-dashboard-app.js"></script>
-</body>
+  </body>
 </html>

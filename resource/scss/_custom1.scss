@@ -8,6 +8,20 @@ body {
 // .type1 {
 //   background-color: #f8f8f8;
 // }
+.btn-success {
+  background-color: $base-green-color;
+  font-weight: bold;
+}
+.btn-danger {
+  border-color: $base-ping-color;
+  background-color: $base-ping-color;
+  font-weight: bold;
+  &:hover {
+    border-color: $base-ping-color-Hover;
+    background-color: $base-ping-color-Hover;
+  }
+}
+
 .content-container {
   * {
     font-family: $base-font;
