@@ -1,59 +1,5 @@
-body {
-  background: #F8F8F8;
-  /* max-width: 1000px; */
-  /* font-family: mo; */
-}
-
-
-/*Nav-bar*/
-.sidebar {
-  position: fixed;
-  /* Position fixed to keep it on the left side */
-  top: 0;
-  /* Position from the top of the viewport */
-  left: 0;
-  /* Position from the left side of the viewport */
-  width: 100px;
-  /* Adjust width as needed */
-  height: 100%;
-  /* Full height of the viewport */
-  background-color: #f8f9fa;
-  /* Background color */
-  padding-top: 20px;
-  /* Add padding to avoid overlapping content */
-  z-index: 1000;
-}
-
-.sidebar ul {
-  list-style: none;
-  /* Remove default list styles */
-  padding: 0;
-  /* Remove default padding */
-  margin: 0;
-  /* Remove default margin */
-}
-
-.sidebar ul li {
-  margin-bottom: 20px;
-  /* Add margin between list items */
-}
-
-.sidebar ul li a {
-  display: block;
-  /* Display links as block elements */
-}
-
-
-/*Top content*/
-.title {
-  color: #578F8C !important;
-}
-
 .top-container {
   position: relative;
-  top: 5%;
-  left: 10%;
-
 }
 
 .small-box {
@@ -97,9 +43,8 @@ body {
   margin-bottom: 20px;
   width: 120px;
   height: 60px;
-  background: #578F8C;
+  background: #578f8c;
 }
-
 
 /*Table*/
 table {
@@ -113,13 +58,13 @@ thead {
   width: 100px;
 }
 .status-delivered {
-    background: #578F8C;
+  background: #578f8c;
 }
 .status-transit {
-  background: #FCA49B;
-
+  background: #fca49b;
 }
-th,td {
+th,
+td {
   text-align: center !important;
 }
 
@@ -129,6 +74,5 @@ th,td {
 }
 
 button {
-  background: #FCA49B;
-  
+  background: #fca49b;
 }
