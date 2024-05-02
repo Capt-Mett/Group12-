@@ -1,19 +1,13 @@
 html {
   scroll-behavior: smooth !important;
-}
-.sidebar {
-  ul {
-    list-style: none;
-    /* Remove default list styles */
-    padding: 0;
-    /* Remove default padding */
-    margin: 0;
-    /* Remove default margin */
-  }
-}
-.type1 {
   background-color: #f8f8f8;
 }
+body {
+  background-color: #f8f8f8;
+}
+// .type1 {
+//   background-color: #f8f8f8;
+// }
 .content-container {
   * {
     font-family: $base-font;

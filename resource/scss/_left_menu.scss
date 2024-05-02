@@ -14,7 +14,14 @@
   /* Background color */
   padding-top: 20px;
   /* Add padding to avoid overlapping content */
-
+  ul {
+    list-style: none;
+    /* Remove default list styles */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+  }
   .menu-item-img {
     max-width: 40px;
   }
