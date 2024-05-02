@@ -54,6 +54,9 @@ body {
   display: block;
   /* Display links as block elements */
 }
+.sidebar img {
+  width: 40px;
+}
 
 
 .title {
@@ -77,12 +80,11 @@ h4 {
 
 .box-container {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  width: 300px;
+  width: 350px;
 }
 
-.alert-btn {
+.create-btn {
   background-color: #F0A89E;
-
 }
 
 button {
