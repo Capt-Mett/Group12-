@@ -6,7 +6,6 @@
     <title>Event Page</title>
     <link rel="stylesheet" href="../assets/css/global.min.css" />
 
-    <link rel="stylesheet" href="event.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Font Link for Icons -->
     <link
@@ -31,60 +30,65 @@
 
   <body ng-app="EventPage" class="event-page" ng-controller="EventPageCtrl">
     <nav class="sidebar ps-3" ng-include="leftmenu"></nav>
-    <div>
-      <h1 class="h1 title position-fixed mx-5">Event Calender</h1>
-    </div>
 
-    <section class="main-container d-flex mt-0">
-      <!-- Main container of layout-->
-      <div class="content-container me-5">
-        <div class="box-container mt-2 p-4">
-          <!--box container-->
-          <div class="d-flex flex-column justify-content-between w-100 rounded">
-            <button class="alert-btn text-light border border-0 p-2">
-              + Add New Event
-            </button>
-            <h3 class="event-name fs-4 text-dark my-4 border-bottom">
-              Created Events
-            </h3>
-          </div>
-          <h4 class="event-location">Los Angeles</h4>
-          <p>information & Description</p>
-          <div>
-            <span>Status</span>
-            <!-- Progress bar here -->
-          </div>
-        </div>
-      </div>
+    <section class="flexContainer h-100">
       <div>
-        <div>
-          <div class="wrapper">
-            <header>
-              <p class="current-date"></p>
-              <div class="icons">
-                <span id="prev" class="material-symbols-rounded"
-                  >chevron_left</span
-                >
-                <span id="next" class="material-symbols-rounded"
-                  >chevron_right</span
-                >
-              </div>
-            </header>
-            <div class="calendar">
-              <ul class="weeks">
-                <li>Sun</li>
-                <li>Mon</li>
-                <li>Tue</li>
-                <li>Wed</li>
-                <li>Thu</li>
-                <li>Fri</li>
-                <li>Sat</li>
-              </ul>
-              <ul class="days"></ul>
+        <h1 class="h1 title position-fixed mx-5">Event Calender</h1>
+      </div>
+
+      <section class="main-container d-flex mt-0">
+        <!-- Main container of layout-->
+        <div class="content-container me-5">
+          <div class="box-container mt-2 p-4">
+            <!--box container-->
+            <div
+              class="d-flex flex-column justify-content-between w-100 rounded"
+            >
+              <button class="alert-btn text-light border border-0 p-2">
+                + Add New Event
+              </button>
+              <h3 class="event-name fs-4 text-dark my-4 border-bottom">
+                Created Events
+              </h3>
+            </div>
+            <h4 class="event-location">Los Angeles</h4>
+            <p>information & Description</p>
+            <div>
+              <span>Status</span>
+              <!-- Progress bar here -->
             </div>
           </div>
         </div>
-      </div>
+        <div>
+          <div>
+            <div class="wrapper">
+              <header>
+                <p class="current-date"></p>
+                <div class="icons">
+                  <span id="prev" class="material-symbols-rounded"
+                    >chevron_left</span
+                  >
+                  <span id="next" class="material-symbols-rounded"
+                    >chevron_right</span
+                  >
+                </div>
+              </header>
+              <div class="calendar">
+                <ul class="weeks">
+                  <li>Sun</li>
+                  <li>Mon</li>
+                  <li>Tue</li>
+                  <li>Wed</li>
+                  <li>Thu</li>
+                  <li>Fri</li>
+                  <li>Sat</li>
+                </ul>
+                <ul class="days"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script

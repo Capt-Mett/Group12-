@@ -1,4 +1,12 @@
 .event-page {
+  .flexContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: center;
+    background: #f8f8f8;
+  }
+
   .title {
     top: 10%;
   }
