@@ -5,17 +5,17 @@ app.controller("ExternalDashboardCtrl", ($scope, $filter, $timeout, $http) => {
   $scope.BoxDisplayOne = "view/partial/boxStyleOne.html";
   $scope.inventorys = [
     {
-      title: "Expexted Orders",
-      count: 2,
+      title: "Expected Orders",
+      count: 4,
       link: "//google.com",
     },
     {
-      title: "Expexted Orders",
+      title: "Expected Orders",
       count: 5,
       link: "//google.com",
     },
     {
-      title: "Expexted Orders",
+      title: "Expected Orders",
       count: 75,
       link: "//google.com",
     },
