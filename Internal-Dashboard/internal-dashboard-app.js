@@ -5,7 +5,7 @@ app.controller(
     CheckingLoginExist("../login");
     $scope.leftmenu = "../view/partial/leftmenu.html";
     $scope.BoxDisplayOne = "../view/partial/boxStyleOne.html";
-
+    $scope.LoginExist = CheckingLoginAvariable();
     $scope.inventorys = [
       {
         title: "Expexted Orders",
@@ -74,5 +74,69 @@ app.controller(
         TrackingNumber: "32982C",
       },
     ];
+
+    $scope.SetQueryProductList = (data) => {
+      $scope.HighestRatings = [];
+      for (let i = 0, n = data.length; i < n; i++) {
+        $scope.HighestRatings.push({
+          id: Cint(data[i].id),
+          Title: data[i].name,
+          Detail: "Blue/Copper",
+          Stars: i + 1,
+          Reviews: i + 10,
+          Thumb:
+            "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/hero/389923-01.png?$responsive$&cropPathE=mobile&fit=stretch,1&wid=440",
+        });
+      }
+    };
+
+    $scope.LoadProductList = () => {
+      let url = "";
+      let dataObj = null;
+      if (true) {
+        url = "https://api.restful-api.dev/objects?id=3&id=5&id=10";
+        dataObj = null;
+      } else {
+        url = "xxxxxxxxxxxxxxx";
+        dataObj = null;
+      }
+
+      $http({
+        method: "GET",
+        url: url,
+        data: dataObj,
+        // headers: {
+        //     'Content-Type': 'application/json',
+        //     'Authorization': 'Bearer ' + $scope.ViewBag.Token,
+        //     'Accept': 'application/json',
+        // }
+      }).then(
+        (successCallback = (response) => {
+          if (response !== null) {
+            if (response.data !== null && response.data.length > 0) {
+              $scope.SetQueryProductList(response.data);
+            }
+          }
+          // this callback will be called asynchronously
+          // when the response is available
+        }),
+        (errorCallback = (response) => {
+          // called asynchronously if an error occurs
+          // or server returns response with an error status.
+          if (
+            CheckIsNotNullOrEmpty(response) &&
+            CheckIsNotNullOrEmpty(response.status) &&
+            response.status == 500
+          ) {
+            ActiveAlertPop(
+              "Error",
+              response.data.ExceptionType + " " + response.data.Message
+            );
+          } else ActiveAlertPop("Error", "Internal Server Error 500");
+        })
+      );
+    };
+
+    $scope.LoadProductList();
   }
 );

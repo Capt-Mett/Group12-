@@ -109,7 +109,7 @@ signInButton.addEventListener("click", (event) => {
           parseResult != null &&
           parseResult.code == 1
         ) {
-          LogIn(parseResult.data, "../");
+          LogIn(parseResult.data, "/external-dashboard");
         }
       })
       .catch(function (error) {

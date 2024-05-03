@@ -1192,19 +1192,24 @@ const Logout = (param) => {
 const LogIn = (Code, Location) => {
   if (Code != undefined && Code != null && Code != "") {
     let data = parseJwt(Code);
-    console.log(data);
     Swal.fire("Ok", "", "success");
     setTimeout(() => {
       localStorage.setItem("LoginCode", Code);
       switch (data.role) {
         case 1:
-          window.location = Location;
+          window.location = "/Internal-Dashboard";
+          break;
+        case 2:
+          window.location = "/external-dashboard";
+          break;
+        case 2:
+          window.location = "/external-dashboard";
           break;
         default:
           window.location = Location;
           break;
       }
-    }, 2000);
+    }, 1500);
   }
 };
 
