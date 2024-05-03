@@ -3,6 +3,7 @@ app.controller("ExternalDashboardCtrl", ($scope, $filter, $timeout, $http) => {
   CheckingLoginExist("./login");
   $scope.leftmenu = "view/partial/leftmenu.html";
   $scope.BoxDisplayOne = "view/partial/boxStyleOne.html";
+  $scope.LoginExist = CheckingLoginAvariable();
   $scope.inventorys = [
     {
       title: "Expected Orders",

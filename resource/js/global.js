@@ -1169,14 +1169,42 @@ const Cfloat = ($agument) => {
 };
 
 const Logout = (param) => {
-  localStorage.clear();
-  window.location = param;
+  Swal.fire({
+    title: "Do you want to Logout?",
+    showDenyButton: false,
+    showCancelButton: true,
+    confirmButtonText: "Log Out",
+    denyButtonText: `Don't save`,
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      // Swal.fire("Ok", "", "success");
+      setTimeout(() => {
+        localStorage.clear();
+        window.location = param;
+      }, 1000);
+    } else if (result.isDenied) {
+      // Swal.fire("Changes are not saved", "", "info");
+    }
+  });
 };
 
 const LogIn = (Code, Location) => {
   if (Code != undefined && Code != null && Code != "") {
-    localStorage.setItem("LoginCode", Code);
-    window.location = Location;
+    let data = parseJwt(Code);
+    console.log(data);
+    Swal.fire("Ok", "", "success");
+    setTimeout(() => {
+      localStorage.setItem("LoginCode", Code);
+      switch (data.role) {
+        case 1:
+          window.location = Location;
+          break;
+        default:
+          window.location = Location;
+          break;
+      }
+    }, 2000);
   }
 };
 
@@ -1186,6 +1214,11 @@ const CheckingLoginExist = (loginPage) => {
     window.location = loginPage;
   // if (login != undefined && login != null && login != "") return true;
   // else return false;
+};
+
+const CheckingLoginAvariable = () => {
+  let loginCode = localStorage.getItem("LoginCode");
+  return loginCode != undefined && loginCode != null && loginCode != "";
 };
 
 const parseJwt = (token) => {

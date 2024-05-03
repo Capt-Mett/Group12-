@@ -81,10 +81,10 @@ signInButton.addEventListener("click", (event) => {
     console.log("Error password validation");
     event.preventDefault(); // Prevent form submission if validation fails
   } else {
+    let data = [];
     let url = "https://api.restful-api.dev/objects";
-    // let url = "https://xxxxxxx/login";
-    axios
-      .post(url, {
+    if (true) {
+      data = {
         name: "Apple MacBook Pro 16",
         data: {
           year: 2019,
@@ -92,13 +92,18 @@ signInButton.addEventListener("click", (event) => {
           "CPU model": "Intel Core i9",
           "Hard disk size": "1 TB",
         },
-      })
+      };
+    } else {
+      url = "https://xxxxxxx/login";
+      data = {};
+    }
+
+    axios
+      .post(url, data)
       .then(function (response) {
-        console.log(response);
         let strResult =
           '{"code":1,"msg":"success","data":"eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoyLCJ1c2VySWQiOjEwMDA2LCJ1c2VybmFtZSI6ImVtbWF3aWxzb24iLCJzdWIiOiJlbW1hd2lsc29uIiwiZXhwIjoxNzE0NzA0OTQyfQ.Rc_C0LhX0PZQd7uUixJtZuQClfZIKvhfO-FabWpllB8"}';
         let parseResult = JSON.parse(strResult);
-        console.log(parseResult);
         if (
           parseResult != undefined &&
           parseResult != null &&
