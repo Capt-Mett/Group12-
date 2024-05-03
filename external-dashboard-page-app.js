@@ -1,5 +1,6 @@
 const app = angular.module("ExternalDashboard", []);
 app.controller("ExternalDashboardCtrl", ($scope, $filter, $timeout, $http) => {
+  CheckingLoginExist("./login");
   $scope.leftmenu = "view/partial/leftmenu.html";
   $scope.BoxDisplayOne = "view/partial/boxStyleOne.html";
   $scope.inventorys = [

@@ -1168,7 +1168,22 @@ const Cfloat = ($agument) => {
   }
 };
 
-const Logout = () => {
+const Logout = (param) => {
   localStorage.clear();
-  window.location = "/login";
+  window.location = param;
+};
+
+const LogIn = (Code, Location) => {
+  if (Code != undefined && Code != null && Code != "") {
+    localStorage.setItem("LoginCode", Code);
+    window.location = Location;
+  }
+};
+
+const CheckingLoginExist = (loginPage) => {
+  let loginCode = localStorage.getItem("LoginCode");
+  if (loginCode == undefined || loginCode == null || loginCode == "")
+    window.location = loginPage;
+  // if (login != undefined && login != null && login != "") return true;
+  // else return false;
 };
