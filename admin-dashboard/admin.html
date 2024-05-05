@@ -24,7 +24,7 @@
     <div class="content-container">
       <div class="row">
         <div class="col-12">
-          <h1 class="hilight major">Internal Team Dashboard</h1>
+          <h1 class="hilight major">Admin Dashboard</h1>
         </div>
         <div class="col-12 row mb-5">
           <div class="col-4" ng-repeat="(key, it) in inventorys | orderBy:'key':true track by key"
@@ -36,7 +36,7 @@
 
   <section class="main-content container">
     <div class="d-flex">
-      <div class="grahp-container col-6 border border-danger"></div>
+      <div class="grahp-container col-8 border border-danger"></div>
 
       <div class="ratings-container col-6 border border-success">
         <h2 class="text-center p-2 m-3 border-bottom border-black border-2">
@@ -68,8 +68,10 @@
   </section>
 
   <section class="mid-container d-flex ">
+
     <div class="pie-chart d-flex flex-column my-5 rounded ">
       <h2>Team Statistics</h2>
+
       <figcaption>
         Team A<span style="color:#0a3812"></span><br>
         Team B<span style="color:#f28e2c"></span><br>
@@ -80,12 +82,13 @@
       </figcaption>
     </div>
 
-    <div class="team-container col-5 my-5">
+    <div class="team-container col-7 my-5">
       <h2>Team List</h2>
-      <div class="d-flex flex-column ">
+      <div class="d-flex flex-column mt-4">
         <div class="team bg-light">
-        <div class="bg-white rounded py-2 d-flex justify-content-around">
-          <div class="">
+        <div class="bg-white rounded-pill py-2 d-flex justify-content-around">
+          <div class="d-flex">
+            <img class="rounded me-4" src="logo1.png" alt="">
             <h5 class="fs-4">Team Name</h5>
             <h2 class="fs-5">Team A</h2>
           </div> 
@@ -108,7 +111,8 @@
         </div>  
          
         <div class="bg-white my-4 rounded py-2 d-flex justify-content-around">
-          <div class="">
+          <div class="d-flex">
+            <img class="rounded me-4"  src="logo2.png" alt="">
             <h5 class="fs-4">Team Name</h5>
             <h2 class="fs-5">Team A</h2>
           </div> 
@@ -131,7 +135,8 @@
         </div>  
          
         <div class="bg-white rounded py-2 d-flex justify-content-around">
-          <div class="">
+          <div class="d-flex">
+            <img class="rounded me-4"  src="logo3.png" alt="">
             <h5 class="fs-4">Team Name</h5>
             <h2 class="fs-5">Team A</h2>
           </div> 
