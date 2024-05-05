@@ -1,0 +1,52 @@
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  color: #578F8C;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Adjust shadow properties */
+
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #578F8C;
+}
+
+button:hover {
+  background-color: #C6D6D5;
+}
+
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #C6D6D5;
+  /* Change color as needed */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #C6D6D5;
+  /* Change color as needed */
+}
