@@ -1,0 +1,110 @@
+<!-- 
+    HTML Order Form
+    Author: Alondra Medina
+    Date: 20/4/2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the CSS stylesheet -->
+    <link rel="stylesheet" href="orderform.css">
+    <title>Order Form</title>
+</head>
+<body>
+    <!-- Navigation bar container -->
+    <div class="navbar-container">
+        <!-- Navigation bar -->
+        <nav class="navbar">
+            <!-- Navigation list -->
+            <ul>
+                <!-- Each list item is a link with an image -->
+                <li><a href="home.html"><img src="Elements/Logo.svg" alt="Home"></a></li>
+                <li><a href="users.html"><img src="Elements/Icon 1.svg" alt="Users"></a></li>
+                <li><a href="products.html"><img src="Elements/Troli.svg" alt="Products"></a></li>
+                <li><a href="events.html"><img src="Elements/Calender.svg" alt="Events"></a></li>
+                <li><a href="map.html"><img src="Elements/Location.svg" alt="Map"></a></li>
+                <li><a href="reports.html"><img src="Elements/Icon 3.svg" alt="Reports"></a></li>
+                <li><a href="tasks.html"><img src="Elements/todo.svg" alt="Tasks"></a></li>
+                <li><a href="settings.html"><img src="Elements/Icon 8.svg" alt="Settings"></a></li>
+        </ul>
+        </nav>
+    </div>
+    <!-- Main content container -->
+    <div class="main-container">
+        <!-- Title container -->
+        <div class="title-container">
+            <!-- Title -->
+            <h1 class="title">Order Details</h1>
+            <div class="info-container">
+                <div class="left-info">
+                    <div id="event-name">Event Name</div>
+                    <div id="media-team-name">Media Team Name</div>
+                    <div id="current-date">Current Date</div>
+                </div>
+                
+                <div class="right-info">
+                    <div id="order-number">Order Number</div>
+                    <div id="event-start-date">Event Start Date</div>
+                    <div id="booking-date">Booking Date</div>
+                </div>
+
+            </div>
+            
+        </div>
+        <!-- Content container -->
+        <div class="content">
+            <!-- Order table -->
+            <table id="order-table">
+                <!-- Table headers -->
+                <tr>
+                    <th>Product Image</th>
+                    <th>Product Name</th>
+                    <th>SKU</th>
+                    <th>Accessories</th>
+                    <th>Color</th>
+                    <th>Quantity</th>
+                    <th>Checkmark</th>
+                </tr>
+                <!-- Table rows will be populated dynamically from backend -->
+            </table>
+            <!-- Shipping address -->
+            <div class="shipping">
+                 <label for="shipping-address">Shipping Address</label>
+                 <div id="shipping-address"></div>
+                </div>
+
+            <!-- Tracking and checkout container -->
+            <div class="tracking-checkout">
+                <!-- Tracking number input -->
+                <div class="tracking">
+                    <label for="tracking-number">Tracking Number:</label>
+                    <input type="text" placeholder="Enter tracking number">
+                </div>
+                <!-- Checkout button -->
+                <div class="checkout">
+                    <button class="complete-order">Complete Order</button>
+                     <!-- Error message container -->
+                     <div id="error-message"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popup container -->
+    <div id="popup-container" class="popup-container">
+        <!-- Popup content -->
+        <div class="popup-content">
+            <!-- Exit button -->
+            <span class="exit-btn" onclick="closePopup()">&times;</span>
+            <!-- Success message -->
+            <p>Products have been sent!</p>
+            <!-- Checkmark icon -->
+            <img src="checkmark.svg" alt="Checkmark">
+        </div>
+    </div>
+    <script src="orderform.js"></script>
+</body>
+</html>

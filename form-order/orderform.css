@@ -1,0 +1,339 @@
+/**
+ * CSS Stylesheet: Order Details Form
+ * Author: Alondra Medina
+ * Date: 23/4/2024
+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Styles */
+
+/* Reset default styles and set global properties */
+body {
+    font-family: 'Montserrat', sans-serif; /* Set default font family */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default paddings */
+    display: flex; /* Use flexbox for layout */
+    background: #F8F8F8; /* Light grey background */
+}
+.navbar ul li:first-child::after {
+    content: ''; /* Required for pseudo-elements */
+    display: block;
+    width: 63px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.4); /* 40% transparent grey */
+    margin: 0 auto; /* Center the line horizontally */
+    margin-top: 20px; /* Adjust this value to position the line vertically */
+}
+
+.navbar {
+    width: 86px; /* Set navbar width */
+    background-color: #ffffff; /* White background color */
+    padding: 10px; /* Padding around navbar items */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    border-bottom-right-radius: 15px; /* Curved bottom right corner */
+}
+
+/* Styles for the list inside the navbar */
+.navbar ul {
+    list-style: none; /* Remove default list styles */
+    text-align: center; /* Center list items horizontally */
+    padding: 0; /* Remove default list padding */
+    margin: 0; /* Remove default list margin */
+}
+
+/* Styles for each list item in the navbar */
+.navbar ul li {
+    margin-bottom: 67px; /* Spacing between each list item */
+    list-style: none; /* Remove default list styles */
+}
+
+/* Styles for pseudo-marker of list items (not used here) */
+.navbar ul li::marker {
+    display: none; /* Hide default marker */
+}
+
+/* Adjustments for first and last list items */
+.navbar ul li:first-child {
+    margin-top: 20px; /* Add spacing before the top SVG icon */
+}
+
+.navbar ul li:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last list item */
+}
+
+/* Styles for anchor tags inside list items */
+.navbar ul li a {
+    display: block; /* Make anchor tags block-level elements */
+}
+
+/* Adjust image size based on list item position */
+.navbar ul li:first-child a img {
+    width: 32px; /* Set width of the first image */
+}
+
+.navbar ul li:not(:first-child) a img {
+    width: 23px; /* Set width of other images */
+}
+
+/* Title Container Styles */
+
+/* Styles for the title container */
+.title-container {
+    width: 100%; /* Full width */
+    color: #578F8C; /* Text color */
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
+}
+
+/* Info Container Styles */
+
+/* Styles for the info container */
+.info-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space evenly between items */
+}
+
+/* Styles for the left info section */
+.left-info {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Styles for the event name */
+#event-name {
+    font-weight: bold; /* Make event name bold */
+    font-size: 20px; /* Adjust font size */
+}
+
+/* Styles for the right info section */
+.right-info {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    margin-left: auto; /* Align to the right */
+    color: #979797; /* Text color */
+    margin-right: 40px; /* Adjust margin right */
+    align-self: flex-end; /* Align to the end */
+}
+
+/* Styles for the order number */
+#order-number {
+    font-weight: bold; /* Make order number bold */
+}
+
+/* Main Container Styles */
+
+/* Styles for the main container */
+.main-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding-top: 58px; /* Add padding between navbar and main content */
+    padding-left: 20px; /* Add padding to the left */
+    width: 80%; /* Set width */
+}
+
+/* Content Styles */
+
+/* Styles for the content section */
+.content {
+    width: 100%; /* Full width */
+}
+
+/* Table Styles */
+
+/* Styles for the table */
+table {
+    border-collapse: separate; /* Separate border model */
+    border-spacing: 0; /* No spacing between cells */
+    width: 100%; /* Full width */
+    border-radius: 2px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* Styles for table cells */
+table th,
+table td {
+    border-left: 1px solid #f5f5f5; /* Add left border */
+    border-right: 1px solid #f5f5f5; /* Add right border */
+    padding-top: 16px; /* Add padding top */
+    padding-bottom: 16px; /* Add padding bottom */
+    padding-left: 8px; /* Add padding left */
+    padding-right: 8px; /* Add padding right */
+}
+
+/* Remove left border from first cell in each row */
+table tr td:first-child {
+    border-left: none;
+}
+
+/* Remove right border from last cell in each row */
+table tr td:last-child {
+    border-right: none;
+}
+
+/* Styles for table header */
+table th {
+    border: none; /* Remove all borders */
+    background-color: #578F8C; /* Green background color */
+    color: white; /* White text color */
+}
+
+/* Alternate row background color */
+tr:nth-child(even) {
+    background-color: rgba(224, 224, 224, 0.4); /* Transparent grey background for even rows */
+}
+
+
+/* Custom Checkbox Styles */
+
+/* Checkmark header invisible*/
+#order-table th:nth-child(7) {
+    color: transparent;
+}
+
+/* Styles for custom checkboxes */
+input[type="checkbox"] {
+    display: none; /* Hide default checkbox */
+}
+
+/* Styles for the label of custom checkboxes */
+input[type="checkbox"] + label {
+    position: relative; /* Position relative */
+    padding-left: 25px; /* Add left padding */
+    cursor: pointer; /* Set cursor to pointer */
+}
+
+/* Styles for the checkbox itself */
+input[type="checkbox"] + label:before {
+    content: ""; /* Empty content */
+    position: absolute; /* Position absolute */
+    left: 0; /* Left position */
+    top: 0; /* Top position */
+    width: 20px; /* Width */
+    height: 20px; /* Height */
+    border: 2px solid #fff; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Styles for the checkmark of the checkbox */
+input[type="checkbox"]:checked + label:after {
+    content: ""; /* Empty content */
+    position: absolute; /* Position absolute */
+    left: 50%; /* Left position */
+    top: 60%; /* Top position */
+    width: 14px; /* Width */
+    height: 14px; /* Height */
+    background: url('Elements/checkmark.svg') no-repeat center center; /* Checkmark image */
+    background-size: contain; /* Make sure image fits */
+    transform: translate(-50%, -50%); /* Center checkmark */
+}
+
+/* Change background color and checkmark color when checkbox is checked */
+input[type="checkbox"]:checked + label:before {
+    background-color: #FCA4A4; /* Background color */
+}
+
+/* Tracking and Checkout Styles */
+
+/* Styles for tracking and checkout container */
+.tracking-checkout {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space evenly between items */
+    align-items: center; /* Align items vertically */
+    margin-top: 20px; /* Adjust margin top */
+    width: 100%; /* Full width */
+}
+
+/* Styles for tracking section */
+.tracking {
+    flex: 1; /* Flex property */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+}
+
+.shipping {
+    margin-top: 20px; /*! margin: ; */
+    color: gray;
+  }
+  
+  .shipping > label:nth-child(1) {
+    font-weight: bold;
+  }
+  
+
+
+/* Styles for tracking label */
+.tracking label {
+    margin-right: 20px; /* Add right margin */
+    font-size: 14px; /* Adjust font size */
+}
+
+/* Styles for tracking input */
+.tracking input[type="text"] {
+    font-family: 'Montserrat', sans-serif; /* Set font family */
+    padding: 10px; /* Add padding */
+}
+
+/* Styles for complete order button */
+.complete-order {
+    padding: 15px 50px; /* Add padding */
+    background-color: #FCA4A4; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 0px; /* Adjust margin right */
+    cursor: pointer; /* Set cursor to pointer */
+    font-weight: bold; /* Make text bold */
+    font-family: 'Montserrat', sans-serif; /* Set font family */
+}
+
+/* Hover styles for complete order button */
+.complete-order:hover {
+    background-color: #b77171; /* Darker background color on hover */
+}
+/* Popup container */
+.popup-container {
+    display: none; /* Hide the popup by default */
+    position: fixed; /* Position the popup relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire viewport */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure the popup appears on top of other content */
+}
+
+/* Popup content */
+.popup-content {
+    position: absolute; /* Position the content relative to the container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the content */
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+}
+
+/* Exit button */
+.exit-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FCA4A4; 
+}
+
+/* Checkmark icon */
+.popup-content img {
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px; /* Adjust the size of the icon */
+    fill: #FCA4A4;
+}
