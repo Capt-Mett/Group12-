@@ -26,11 +26,17 @@
         <div class="col-12">
           <h1 class="hilight major">Internal Team Dashboard</h1>
         </div>
-        <div class="col-12 row mb-5">
+        <div class="col-10 row mb-5">
           <div class="col-4" ng-repeat="(key, it) in inventorys | orderBy:'key':true track by key"
             ng-include="BoxDisplayOne"></div>
         </div>
+        <div class="col-2">
+          <button class="create-btn aaa text-light border border-0 p-2 fs-5">
+            + Add New Event
+          </button>
+        </div>
       </div>
+
     </div>
   </section>
 
