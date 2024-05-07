@@ -1,193 +1,292 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <link rel="stylesheet" href="../assets/css/global.min.css" />
     <!-- Bootstrap CSS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="ProductPage2.css">
+    <script
+      type="text/javascript"
+      defer
+      src="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
     <title>Product Page</title>
-</head>
-<body>
-<div class="container-fluid">
-    <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#1"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Logo.jpg?raw=true" alt="Logo"></a>
-                    </li>
-                    <hr>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#2"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Icon%201.jpg?raw=true" alt="Person icon"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="file:///Users/ashishjames/Desktop/cdn/ProductOrderPage.html#"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Troli.jpg?raw=true" alt="Trolley icon"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#4"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Icon%203.jpg?raw=true" alt="Data icon"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#5"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Location.jpg?raw=true" alt="Location icon"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#6"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Calender.jpg?raw=true" alt="Calender icon"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#7"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/tasks.jpg?raw=true" alt="Clock icon"></a>
-                    </li>
-                    <li class="nav-item">
-                        <li <a class="Settings">&#9965;</a> </li>
+  </head>
+  <body
+    ng-app="ProductCatelogue"
+    class="Product-Catelogue-page"
+    ng-controller="ProductCatelogueCtrl"
+  >
+    <nav class="sidebar" ng-include="leftmenu"></nav>
 
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
+    <div class="d-flex container mt-5 mb-5">
+      <section class="flexContainer h-100">
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            <div class="header-container">
-                <h1 class="header-title">Dyson Promotional Products</h1>
-                <a class="nav-link" href="file:///Users/ashishjames/Desktop/cdn/ProductOrderPage.html#" onclick="addToCart()">
-                    <span id="cart-count">0</span>
-                    <img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Troli%20-%20fill.jpg?raw=true" alt="Filled in Shopping Cart" class="cart-icon">
-                </a>
-            </div>
-            <br>
-            <br>
+          <div class="header-container">
+            <h1 class="header-title">Dyson Promotional Products</h1>
+            <a
+              class="nav-link"
+              href="file:///Users/ashishjames/Desktop/cdn/ProductOrderPage.html#"
+              onclick="addToCart()"
+            >
+              <span id="cart-count">0</span>
+              <img
+                src="https://github.com/ashtree112/GroupPROJECT/blob/main/Troli%20-%20fill.jpg?raw=true"
+                alt="Filled in Shopping Cart"
+                class="cart-icon"
+              />
+            </a>
+          </div>
+          <br />
+          <br />
 
-            <nav class="navbar navbar-light bg-light">
-                <form class="container-fluid d-flex justify-content-between align-items-center">
-                    <div class="col">
-                        <div class="input-group">
-                            <input id="search-input" class="form-control border-0 rounded-pill" type="search" placeholder="Search" aria-label="Search" style="border-width: 1px;">
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-success" type="submit">Search <img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Search%20Bar.jpg?raw=true" alt="Magnifying glass" style="width: 30px;"></button>
-                </form>
-                <ul class="navbar-nav pagination-left">
-                    <li class="nav-item">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+          <nav class="navbar navbar-light bg-light">
+            <form
+              class="container-fluid d-flex justify-content-between align-items-center"
+            >
+              <div class="col">
+                <div class="input-group">
+                  <input
+                    id="search-input"
+                    class="form-control border-0 rounded-pill"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                    style="border-width: 1px"
+                  />
+                </div>
+              </div>
+              <button class="btn btn-outline-success" type="submit">
+                Search
+                <img
+                  src="https://github.com/ashtree112/GroupPROJECT/blob/main/Search%20Bar.jpg?raw=true"
+                  alt="Magnifying glass"
+                  style="width: 30px"
+                />
+              </button>
+            </form>
+            <ul class="navbar-nav pagination-left">
+              <li class="nav-item">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
                     </li>
-                </ul>
-            </nav>
-            <br>
-            <br>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          <br />
+          <br />
 
+          <p class="product-count">Showing 1-4 of 12 item(s)</p>
+          <p
+            id="no-results"
+            style="
+              display: none;
+              text-align: center;
+              font-size: 24px;
+              font-weight: bold;
+              margin-left: 20px;
+            "
+          >
+            No results found
+          </p>
+          <div class="dropdown-container">
+            <h2 class="categories-header">Categories</h2>
 
-            <p class="product-count">Showing 1-4 of 12 item(s)</p>
-            <p id="no-results" style="display: none; text-align: center; font-size: 24px; font-weight: bold; margin-left: 20px;">No results found</p>
-            <div class="dropdown-container">
-                <h2 class="categories-header">Categories</h2>
-
-
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        All Products
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">View All</a></li>
-                        <li><a class="dropdown-item" href="#">Hair Dryers</a></li>
-                        <li><a class="dropdown-item" href="#">Hair Straighteners</a></li>
-                        <li><a class="dropdown-item" href="#">Hair Stylers</a></li>
-                        <li><a class="dropdown-item" href="#">Vacuum Cleaners</a></li>
-                    </ul>
-                </div>
+            <div class="dropdown">
+              <a
+                class="btn btn-secondary dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">View All</a></li>
+                <li><a class="dropdown-item" href="#">Hair Dryers</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Hair Straighteners</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Hair Stylers</a></li>
+                <li><a class="dropdown-item" href="#">Vacuum Cleaners</a></li>
+              </ul>
             </div>
+          </div>
 
-
-
-            <div class="container overflow-hidden">
-                <div class="row gy-5">
-                    <div class="col-6" data-category="Hair Stylers">
-                        <div class="p-3 border bg-light">
-                            <a href="#" class="product-link" onclick="addToCart('Airwrap Origin Multi-Styler and dryer', 'Nickel/Copper', '5', 1)">
-                                <p id="productName"><span class="plus-btn">+</span> Airwrap™ Origin Multi-Styler and dryer</p>
-                            </a>
-                            <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/533897-01.jpg?$responsive$&wid=800" alt="Dyson Airwrap" class="img-fluid">
-                            <p>Hairstyler Nickel/Copper</p>
-                            <div class="quantity-info">
-                                <p>Quantity Remaining: <span id="remaining-quantity">10</span></p>
-                                <p> Adds On Included: <span id="add-ons">5</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6" data-category="Hair Dryers">
-                        <div class="p-3 border bg-light">
-                            <a href="#" class="product-link" onclick="addToCart('Supersonic Hairdryer', 'Prussian Blue/Rich Copper', '5', 1)">
-                                <p><span class="plus-btn">+</span> Supersonic™ Hairdryer</p>
-                            </a>
-                            <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle-locale/en_GB/389911-01.jpg?$responsive$&wid=800" alt="Dyson Hairstyler" class="img-fluid">
-                            <p>Hair dryer Prussian Blue/Rich Copper</p>
-                            <div class="quantity-info">
-                                <p>Quantity Remaining: <span id="remaining-quantity">15</span></p>
-                                <p> Adds On Included: <span id="add-ons">5</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6" data-category="Hair Straighteners">
-                        <div class="p-3 border bg-light">
-                            <a href="#" class="product-link" onclick="addToCart('AirStrait Straightener', 'Prussian Blue/Rich Copper', '3', 1)">
-                                <p><span class="plus-btn">+</span> AirStrait™ Straightener</p>
-                            </a>
-                            <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/401315-01.jpg?$responsive$&wid=800" alt="Dyson AirStrait Straightener" class="img-fluid">
-                            <p>Wet to dry Prussian Blue/Rich Copper</p>
-                            <div class="quantity-info">
-                                <p>Quantity Remaining: <span id="remaining-quantity">15</span></p>
-                                <p> Adds On Included: <span id="add-ons">3</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6" data-category="Vacuum Cleaners">
-                        <div class="p-3 border bg-light">
-                            <a href="#" class="product-link" onclick="addToCart('360 Vis Nav', 'Blue/Nickel', '5', 1)">
-                                <p><span class="plus-btn">+</span> 360 Vis Nav™</p>
-                            </a>
-                            <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/355061-01.jpg?$responsive$&wid=800" alt="Dyson Robot Vacuum" class="img-fluid">
-                            <p>Robot Vacuum in Blue/Nickel</p>
-                            <div class="quantity-info">
-                                <p>Quantity Remaining: <span id="remaining-quantity">25</span></p>
-                                <p> Adds On Included: <span id="add-ons">5</span></p>
-                            </div>
-                        </div>
-                    </div>
+          <div class="container overflow-hidden">
+            <div class="row gy-5">
+              <div class="col-6" data-category="Hair Stylers">
+                <div class="p-3 border bg-light">
+                  <a
+                    href="#"
+                    class="product-link"
+                    onclick="addToCart('Airwrap Origin Multi-Styler and dryer', 'Nickel/Copper', '5', 1)"
+                  >
+                    <p id="productName">
+                      <span class="plus-btn">+</span> Airwrap™ Origin
+                      Multi-Styler and dryer
+                    </p>
+                  </a>
+                  <img
+                    src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/533897-01.jpg?$responsive$&wid=800"
+                    alt="Dyson Airwrap"
+                    class="img-fluid"
+                  />
+                  <p>Hairstyler Nickel/Copper</p>
+                  <div class="quantity-info">
+                    <p>
+                      Quantity Remaining:
+                      <span id="remaining-quantity">10</span>
+                    </p>
+                    <p>Adds On Included: <span id="add-ons">5</span></p>
+                  </div>
                 </div>
+              </div>
+              <div class="col-6" data-category="Hair Dryers">
+                <div class="p-3 border bg-light">
+                  <a
+                    href="#"
+                    class="product-link"
+                    onclick="addToCart('Supersonic Hairdryer', 'Prussian Blue/Rich Copper', '5', 1)"
+                  >
+                    <p><span class="plus-btn">+</span> Supersonic™ Hairdryer</p>
+                  </a>
+                  <img
+                    src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle-locale/en_GB/389911-01.jpg?$responsive$&wid=800"
+                    alt="Dyson Hairstyler"
+                    class="img-fluid"
+                  />
+                  <p>Hair dryer Prussian Blue/Rich Copper</p>
+                  <div class="quantity-info">
+                    <p>
+                      Quantity Remaining:
+                      <span id="remaining-quantity">15</span>
+                    </p>
+                    <p>Adds On Included: <span id="add-ons">5</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6" data-category="Hair Straighteners">
+                <div class="p-3 border bg-light">
+                  <a
+                    href="#"
+                    class="product-link"
+                    onclick="addToCart('AirStrait Straightener', 'Prussian Blue/Rich Copper', '3', 1)"
+                  >
+                    <p>
+                      <span class="plus-btn">+</span> AirStrait™ Straightener
+                    </p>
+                  </a>
+                  <img
+                    src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/401315-01.jpg?$responsive$&wid=800"
+                    alt="Dyson AirStrait Straightener"
+                    class="img-fluid"
+                  />
+                  <p>Wet to dry Prussian Blue/Rich Copper</p>
+                  <div class="quantity-info">
+                    <p>
+                      Quantity Remaining:
+                      <span id="remaining-quantity">15</span>
+                    </p>
+                    <p>Adds On Included: <span id="add-ons">3</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6" data-category="Vacuum Cleaners">
+                <div class="p-3 border bg-light">
+                  <a
+                    href="#"
+                    class="product-link"
+                    onclick="addToCart('360 Vis Nav', 'Blue/Nickel', '5', 1)"
+                  >
+                    <p><span class="plus-btn">+</span> 360 Vis Nav™</p>
+                  </a>
+                  <img
+                    src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/355061-01.jpg?$responsive$&wid=800"
+                    alt="Dyson Robot Vacuum"
+                    class="img-fluid"
+                  />
+                  <p>Robot Vacuum in Blue/Nickel</p>
+                  <div class="quantity-info">
+                    <p>
+                      Quantity Remaining:
+                      <span id="remaining-quantity">25</span>
+                    </p>
+                    <p>Adds On Included: <span id="add-ons">5</span></p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </main>
+      </section>
     </div>
-</div>
 
-<script src="DysonProductPage2.js"></script>
-<!-- <script src="./api/productApi.js"></script> -->
-<script>
-
-    function fetchProducts() {
-        axios.get('http://localhost:8080/products')
-            .then(response => {
-                const data = response.data;
-                document.getElementById('productName').textContent = data.product;
-                console.log('This is from backend data', data);
-            })
-    }
-</script>
-</body>
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/js/global.min.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+    ></script>
+    <script type="text/javascript" src="product-catalogue-page-app.js"></script>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script type="text/javascript" src="DysonProductPage2.js"></script>
+    <!-- <script type="text/javascript" src="./api/productApi.js"></script> -->
+    <script type="text/javascript">
+      function fetchProducts() {
+        axios.get("http://localhost:8080/products").then((response) => {
+          const data = response.data;
+          document.getElementById("productName").textContent = data.product;
+          console.log("This is from backend data", data);
+        });
+      }
+    </script>
+  </body>
 </html>
