@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductOrderPage</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="ProductOrderPage.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#1"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Logo.jpg?raw=true" alt="Logo"></a>
+                        </li>
+                        <hr>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#2"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Icon%201.jpg?raw=true" alt="Person icon"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="file:///Users/ashishjames/Desktop/cdn/ProductOrderPage.html#"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Troli.jpg?raw=true" alt="Trolley icon"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#4"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Icon%203.jpg?raw=true" alt="Data icon"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#5"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Location.jpg?raw=true" alt="Location icon"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#6"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/Calender.jpg?raw=true" alt="Calender icon"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#7"><img src="https://github.com/ashtree112/GroupPROJECT/blob/main/tasks.jpg?raw=true" alt="Clock icon"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="Settings">&#9965;</a>
+                        </li> 
+                    </ul>
+                </div>   
+            </nav>
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <h1 class="header-title">Your Booked Items</h1>
+                <p>Event data, Location, Date, Time</p>
+                <div class="Hyperlink">
+                    <p><a href="file:///Users/ashishjames/Desktop/cdn/ProductPage2.html?#7">Back to Browsing</a></p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Product</th>
+                            <th>Colour</th>
+                            <th>Adds On</th>
+                            <th>Quantity</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordered-products">
+                        <!-- Dynamic rows for products will be added here -->
+                    </tbody>
+                </table>
+                <!-- Delivery Address Section -->
+                <div class="delivery-box">
+                    <h2>Delivery Address</h2>
+                    <label for="quantity" id="total-quantity-label">Quantity of Products:</label>
+
+                    <div class="quantity-controls">
+                   
+                        <input type="text" id="quantity" name="quantity" placeholder="Total Quantity" readonly>
+                        
+                    </div>
+                    
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Media Team">
+                        <label for="floatingInput">Media Team Name</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingAddress" placeholder="Street Address">
+                        <label for="floatingPassword">Street Address</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingCountry" placeholder="Password">
+                        <label for="floatingPassword">County</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPostcode" placeholder="Postcode">
+                        <label for="floatingPassword">Postcode</label>
+                      </div>
+                    <h3>Details</h3>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                    <p>Delivery Date: January 1, 2025</p>
+                    <p>Event ID: 123456789</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="ProductOrderPage.js"></script>
+</body> 
+</html>

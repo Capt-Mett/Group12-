@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    background-color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link {
+    text-align: center; /* Center the content horizontally */
+}
+
+.nav-link img {
+    width: 75px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+}
+
+.sidebar {
+    position: relative;
+    top: 0;
+    bottom: 2%;
+    overflow-y: auto;
+    height: auto;
+}
+
+.sidebar-sticky {
+    position: relative;
+    height: 100%;
+}
+
+.bg-custom {
+    background-color: #e0e0e0;
+    padding: 0;
+}
+
+.Settings {
+    color: rgb(240, 168, 158);
+    font-size: 50px;
+    position: absolute;
+    bottom: 10%;
+    list-style: none;
+}
+
+.header-title {
+    color: rgb(99, 141, 139); /* Text color */
+    font-size: 32px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.Hyperlink {
+    text-align: right; /* Align the content to the right */
+    margin-top: 20px; /* Adjust margin-top as needed */
+}
+
+.Hyperlink a {
+    color:rgb(99, 141, 139) ; /* Change link color */
+    text-decoration: underline; /* Keep underline */
+}
+
+.Hyperlink a:hover {
+    text-decoration: underline; /* Keep underline on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    background-color: white;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+img {
+    width: 100px;
+    height: auto;
+}
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.delivery-box {
+    margin-top: 0px; /* Adjust as needed */
+    padding: 0px;
+    background-color: white;
+}
+
+
+.delivery-box h3
+ {
+    text-align: right;
+    margin-right: 40px;
+    color:rgb(99, 141, 139) ; 
+}
+
+.delivery-box p{
+    text-align: right;
+    margin-right: 40px;
+    color: black ; 
+    
+
+}
+
+.delivery-box h2 {
+    text-align: left;
+    margin-left: 40px;
+    color:rgb(99, 141, 139)
+
+}
+
+
+.delivery-box p1 {
+    text-align: left;
+    margin-left: 40px;
+    color:black; 
+
+
+}
+
+.delivery-box button {
+    margin-top: 20px;
+    margin-right: 40px;
+    display: block;
+    margin-left: auto;
+}
+
+
+.delivery-box button.btn-primary {
+    background-color: rgb(240, 168, 158);
+    color: white;
+    border: none;
+}
+
+.delivery-box button.btn-primary:hover {
+    background-color: #ff69b4; /* Lighter shade of pink on hover */
+}
+
+.delivery-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-box form label {
+    width: 150px; /* Adjust the width of the labels to accommodate the widest label */
+}
+
+.delivery-box form input {
+    width: calc(100% - 150px); /* Calculate the width of the input fields to fill the remaining space */
+    box-sizing: border-box; /* Include padding and border in the input's total width */
+    margin-left: 20px; /* Add a left margin to create space between labels and inputs */
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#quantity {
+    margin: 0 10px;
+    width: 50px; /* Adjust width as needed */
+}
+
+
+
+
